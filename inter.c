@@ -24,7 +24,11 @@ char letters[1000] = {0};
 	while(argv[1][i])
 	{
 		if (!(ft_strchr(letters,argv[1][i])) && ft_strchr(argv[2], argv[1][i]))
-			letters[c] = argv[1][i],write(1, &letters[c++], 1);
+		{
+			letters[c] = argv[1][i];
+			write(1, &letters[c], 1);
+			c++;
+		}
 		i++;
 	}
 			write(1, "\n", 1);
